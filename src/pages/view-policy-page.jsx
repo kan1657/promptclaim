@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Descriptions, Collapse } from 'antd'
 import { AppLayout } from '../components/app-layout'
 import { useParams } from 'react-router-dom'
+import api from '../api.jsx'
 
 const { Panel } = Collapse
 
@@ -12,15 +13,21 @@ export const ViewPolicyPage = (props) => {
   const [policyId, setPolicyId] = useState('')
   const [policyDes, setPolicyDes] = useState('')
   const fetchItem = async () => {
-    const data = await fetch(
-      'http://localhost:8001/retailer/policy/getByPolicyId/' + key,
-      {
-        headers: {
-          Authorization: localStorage.token,
-        },
+    // const data = await fetch(
+    //   'http://localhost:8001/retailer/policy/getByPolicyId/' + key,
+    //   {
+    //     headers: {
+    //       Authorization: localStorage.token,
+    //     },
+    //   },
+    // )
+    const response = await api.get('/retailer/policy/getByPolicyId/' + key, {
+      headers: {
+        Authorization: localStorage.token,
       },
-    )
-    const item = await data.json()
+    })
+    const item = response.data
+    // const item = await data.json()
     setItems(item)
     console.log(item)
     await setPolicyId(item[0].policy_id)

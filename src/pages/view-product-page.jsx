@@ -2,21 +2,28 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Descriptions } from 'antd'
 import { AppLayout } from '../components/app-layout'
+import api from '../api.jsx'
 
 export const ViewProductPage = (props) => {
   let { key } = useParams()
   //API
   const [item, setItems] = useState([])
   const fetchItem = async () => {
-    const data = await fetch(
-      'http://localhost:8001/retailer/product/getByProductNo/' + key,
-      {
-        headers: {
-          Authorization: localStorage.token,
-        },
+    // const data = await fetch(
+    //   'http://localhost:8001/retailer/product/getByProductNo/' + key,
+    //   {
+    //     headers: {
+    //       Authorization: localStorage.token,
+    //     },
+    //   },
+    // )
+    // const item = await data.json()
+    const response = await api.get('/retailer/product/getByProductNo/' + key, {
+      headers: {
+        Authorization: localStorage.token,
       },
-    )
-    const item = await data.json()
+    })
+    const item = response.data
     setItems(item)
     console.log(item)
   }

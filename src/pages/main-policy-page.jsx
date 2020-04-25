@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Table } from 'antd'
+import api from '../api.jsx'
 
 import { AppLayout } from '../components/app-layout'
 // import Item from 'antd/lib/list/Item'
@@ -7,12 +8,18 @@ import { AppLayout } from '../components/app-layout'
 export const MainPolicyPage = (props) => {
   const [items, setItems] = useState([])
   const fetchItem = async () => {
-    const data = await fetch('http://localhost:8001/retailer/policy/get', {
+    // const data = await fetch('http://localhost:8001/retailer/policy/get', {
+    //   headers: {
+    //     Authorization: localStorage.token,
+    //   },
+    // })
+    const response = await api.get('/retailer/policy/get', {
       headers: {
         Authorization: localStorage.token,
       },
     })
-    const items = await data.json()
+
+    const items = response.data
     setItems(items)
     console.log('items', items)
   }

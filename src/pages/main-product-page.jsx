@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Table } from 'antd'
+import api from '../api.jsx'
 
 // import { DataTable } from '../components/table'
 
@@ -18,12 +19,21 @@ export const MainProductPage = (props) => {
     fetchItem()
   }, [])
   const fetchItem = async () => {
-    const data = await fetch('http://localhost:8001/retailer/product/get', {
+    const response = await api.get('/retailer/product/get', {
       headers: {
         Authorization: localStorage.token,
       },
     })
-    const items = await data.json()
+    // const data = await fetch(
+    //   'http://ec2-54-169-201-208.ap-southeast-1.compute.amazonaws.com:8001/retailer/product/get',
+    //   {
+    //     headers: {
+    //       Authorization: localStorage.token,
+    //     },
+    //   },
+    // )
+    // const items = await data.json()
+    const items = response.data
     setItems(items)
     console.log('items', items)
   }
