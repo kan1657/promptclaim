@@ -1,0 +1,103 @@
+@import '~antd/dist/antd.css';
+
+.site-layout-content {
+  background: #fff;
+  padding: 24px;
+  min-height: 530px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.header {
+  background-color: #367fcc;
+  padding: 10px;
+}
+
+.title {
+  text-align: left;
+}
+
+.product-image {
+  height: 200px;
+  width: 200px;
+}
+
+.logo {
+  height: 48.5px;
+  width: 104.25px;
+}
+
+.logo-login {
+  height: 130;
+  width: 280;
+}
+
+.user {
+  height: 40px;
+  width: 40px;
+}
+
+.ant-descriptions-item-label {
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5715;
+}
+
+.ant-descriptions-bordered .ant-descriptions-item-label {
+  background-color: #d6e4f5;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.biglogo {
+  margin-top: 20px;
+  height: 150px;
+  width: 300px;
+  align-items: center;
+}
+
+.userbox {
+  margin-top: 20px;
+  width: 600px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Login-Page {
+  text-align: center;
+}
