@@ -62,7 +62,7 @@ export const LoginPage = (props) => {
     <article className="Login-Page">
       <Form>
         <img
-          className="logo-login animated infinite bounce delay-2s"
+          className="logo-login animated fadeInUp delay-1s"
           src={logo}
           alt="logo"
         />
