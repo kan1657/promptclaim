@@ -49,7 +49,7 @@ export const MainProductPage = (props) => {
     name: item.product_name,
     serial: item.serial_no,
     product: item.product_no,
-    expiry: item.policy_end_date.substr(0,10),
+    expiry: item.policy_end_date.substr(0, 10),
   }))
 
   //Dashboard
@@ -103,7 +103,7 @@ const columns = [
       {
         text: 'washing machinee',
         value: 'washing machine',
-      }
+      },
     ],
     // specify the condition of filtering result
     // here is that finding the name started with `value`
@@ -123,7 +123,7 @@ const columns = [
   {
     title: 'Expiry Date',
     dataIndex: 'expiry',
-    sorter: (a, b) => a.expiry[5,6] - b.expiry[5,6],
+    sorter: (a, b) => a.expiry[(5, 6)] - b.expiry[(5, 6)],
   },
 ]
 
