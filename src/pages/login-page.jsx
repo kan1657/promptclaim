@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Input, Button, Checkbox, Row, Col, Modal } from 'antd'
+import { Form, Input, Button, Row, Col, Modal } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import { useState } from 'react'
 import logo from '../photo/darktranslogo.png'
@@ -71,6 +71,7 @@ export const LoginPage = (props) => {
           <Col span={8}>
             <Form.Item
               name="username"
+              className="login-form"
               onChange={(e) => setUsername(e.target.value)}
               rules={[
                 {
@@ -110,9 +111,9 @@ export const LoginPage = (props) => {
           <Col span={8}></Col>
         </Row>
         <Form.Item>
-          <Form.Item name="remember" valuePropName="checked" noStyle>
+          {/* <Form.Item name="remember" valuePropName="checked" noStyle>
             <Checkbox>Remember me</Checkbox>
-          </Form.Item>
+          </Form.Item> */}
         </Form.Item>
 
         <Form.Item>

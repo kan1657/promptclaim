@@ -30,10 +30,11 @@
 }
 
 .logo-login {
-  height: 130;
-  width: 280;
+  padding-top: 50px;
 }
-
+.login-form {
+  padding-top: 50px;
+}
 .user {
   height: 40px;
   width: 40px;
