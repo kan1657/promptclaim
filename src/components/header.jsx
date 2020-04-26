@@ -19,7 +19,7 @@ export const Topbar = () => {
       </Dropdown>
 
       <img
-        className="logo"
+        className="logo animated zoomIn "
         src={logo}
         alt="prompt claim logo"
         style={{ float: 'left' }}
@@ -37,7 +37,9 @@ const menu = (
     </Menu.Item>
     <Menu.Divider /> */}
     <Menu.Item key="0" onClick={() => localStorage.clear()}>
-      <a href="/login">LogOut</a>
+      <a href="/login" className="pure-button button-large ">
+        Log Out
+      </a>
     </Menu.Item>
   </Menu>
 )
