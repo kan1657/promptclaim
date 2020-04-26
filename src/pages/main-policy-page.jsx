@@ -84,7 +84,7 @@ const columns = [
   {
     title: 'Policy Owner',
     dataIndex: 'owner',
-    sorter: (a, b) => a.owner.length - b.owner.length,
+    sorter: (a, b) => a.owner.localeCompare(b.owner),
   },
   {
     title: 'Year Created',
