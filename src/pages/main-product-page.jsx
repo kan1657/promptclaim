@@ -101,7 +101,7 @@ const columns = [
         value: 'fridge',
       },
       {
-        text: 'washing machinee',
+        text: 'washing machine',
         value: 'washing machine',
       },
     ],
