@@ -49,7 +49,8 @@ export const MainProductPage = (props) => {
     name: item.product_name,
     serial: item.serial_no,
     product: item.product_no,
-    expiry: item.policy_end_date.substr(0, 10),
+    expiry:
+      item.policy_end_date === null ? '-' : item.policy_end_date.substr(0, 10),
   }))
 
   //Dashboard
@@ -85,24 +86,24 @@ const columns = [
     // specify the filter category
     filters: [
       {
-        text: 'chair',
-        value: 'chair',
+        text: 'Chair',
+        value: 'Chair',
       },
       {
-        text: 'table',
-        value: 'table',
+        text: 'Table',
+        value: 'Table',
       },
       {
-        text: 'lamp',
-        value: 'lamp',
+        text: 'Lamp',
+        value: 'Lamp',
       },
       {
-        text: 'fridge',
-        value: 'fridge',
+        text: 'Fridge',
+        value: 'Fridge',
       },
       {
-        text: 'washing machine',
-        value: 'washing machine',
+        text: 'Washing machine',
+        value: 'Washing Machine',
       },
     ],
     // specify the condition of filtering result
